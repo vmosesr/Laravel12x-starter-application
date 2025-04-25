@@ -1,11 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\PageController;
+use App\Http\Controllers\EnquiryPageController;
 use Livewire\Volt\Volt;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+// Pages controlled from PageController
+
+Route::get('/enquiry', [EnquiryPageController::class, 'show'])->name('enquiry');
+
+
+
 
 
 // user
